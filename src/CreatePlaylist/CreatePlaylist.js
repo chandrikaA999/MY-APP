@@ -3,7 +3,7 @@ import '../App.css';
 import PlaylistDialogBox from '../PlaylistDialogBox/PlaylistDialogBox';
 
 
-const CreatePlaylist = () => {
+const CreatePlaylist = ({playlists,setPlaylistCount,setplaylist,playlistCount}) => {
   const [createPlaylist, setPlaylist] = useState(false);
 
   const handlePlaylist = () => {
@@ -13,7 +13,7 @@ const CreatePlaylist = () => {
   return (
     <>
       <button className='create-playlist' onClick={handlePlaylist}>Create Playlist</button>
-      <PlaylistDialogBox open={createPlaylist} handleClose={handlePlaylist} />
+      <PlaylistDialogBox open={createPlaylist} handleClose={handlePlaylist} playlists={playlists} setPlaylistCount={setPlaylistCount} setplaylist={setplaylist} playlistCount={playlistCount}/>
     </>
   );
 };

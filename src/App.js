@@ -17,7 +17,7 @@ const App = () => {
     <Router>
       <Navbar playlistCount={playlistCount} />
       <Routes>
-        <Route exact path="/" element={<Home  />} />
+        <Route exact path="/" element={<Home  playlists={playlists} setPlaylistCount={setPlaylistCount} setplaylist={setplaylist} playlistCount={playlistCount}/>} />
         <Route path="/playlist" element={<Playlist playlists={playlists} />} />
       </Routes>
     </Router>
